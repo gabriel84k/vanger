@@ -1,0 +1,68 @@
+
+@media screen and (max-width: 700px) {
+ 
+    footer{
+        text-align: center;
+    }
+    .btn-lg div.show{
+        width: 44%
+        
+    }
+    .tabla-sucursal {
+        width: 227%;
+    }
+    .glyphicon{
+        display: none;
+    }
+    .sector{
+        width: 154%;;
+    }
+    #mytable{
+        overflow: auto;
+    }
+    #menu, .nav{
+        margin-bottom: 15px;
+        border-radius: 0px;
+    }
+    .logoinicio img{
+        width: $logoiniciomas;
+    }
+    #headingOne{
+        background-color: #ED1650;
+        color: white;
+    }
+    .footerimg{
+        width: $footimagenmas;
+    }
+   
+}
+
+@media screen and (min-width: 700px) {
+ 
+    footer{
+        text-align: left;
+    }
+    .btn-lg div.show{
+        //width: 114%;
+        //position: static;
+    }
+    .logoinicio img{
+        width: $logoiniciomenos;
+    }
+    .footerimg{
+        width: $footimagenmenos;
+    }
+    .salir-menu{
+        display:none;
+    }
+    .detalle-equipo>.m-widget1.col{
+        max-width: 68%;
+    }
+    #headingOne{
+       display:none;
+    }
+    #collapseOne{
+        display:block;
+    }
+        
+}

@@ -1,0 +1,11 @@
+Para crear el login con estado una de las formas que encontre mas eficientes es:
+
+if(Auth::user()->estado != 0){
+           
+}else{
+    Auth::logout();
+    return \Redirect::back()->withErrors([$this->username()=>'Estas credenciales no concuerdan con nuestros registros']);
+}
+
+el codigo anterior debe ir en el  protected function authenticated(Request $request, $user)
+linea 122 del archivo AuthenticatesUsers que se encuentra en laravel->iluminate-> fundation-> auth 

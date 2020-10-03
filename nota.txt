@@ -1,0 +1,41 @@
+Notas varias [intalaciones, desactivaciones, etc...]
+
+1- Se desactivo la ruta register que se encuentra en : [vendor/laravel/framework/src/Illuminate/Routing/Router.php.]
+2- Se instalo el paquete de idioma Español de la siguiente manera:
+[
+    composer require laraveles/spanish
+    php artisan laraveles:install-lang
+    modificar locale de la configuración de Laravel en config/app.php:
+    Ej: español
+    'locale' => 'es',
+    
+    Ej: inglés
+    'locale' => 'en',
+
+]
+
+
+
+Errores al Publicar enb servidor compartido 
+
+Cuando ocurre el error que dice el hostin compartido no tiene habilitado el proc_open
+se debe implementar la solucion de :
+https://github.com/laravel/framework/issues/30054
+[
+    Publish flare config file
+    php artisan vendor:publish --tag=flare-config
+
+    and in config/flare.php
+
+    Set
+
+    'collect_git_information' => false 
+    'reporting' => [
+            'anonymize_ips' => true,
+            'collect_git_information' => false,
+            'report_queries' => true,
+            'maximum_number_of_collected_queries' => 200,
+            'report_query_bindings' => true,
+            'report_view_data' => true,
+        ],
+]

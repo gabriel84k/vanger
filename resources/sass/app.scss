@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+
+@import 'style/Vanger/variables'; /*Vanger*/
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/dist/css/boostrap.min.css';
+
+//DataTable
+@import 'DataTable';
+
+//style
+@import 'sucursales';
+
+// login
+@import 'login';
+@import 'menu';
+@import 'layout';
+
+// Fuentes
+@import "../../node_modules/font-awesome/scss/font-awesome.scss"; 
+@import "./fontawesome/css/all.css";
+
+//screen
+@import "screen";

@@ -1,0 +1,2796 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "fechahora": "2020-06-15 00:00:00",
+      "idinspeccion": 10363,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionextintor",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": null,
+      "observaciones": null,
+      "created_at": "2020-06-16 06:43:50",
+      "updated_at": "2020-06-16 11:38:59",
+      "revision_periodica_id": 4,
+      "puesto_id": 8,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 8,
+        "nroPuesto": "001",
+        "ubicacion": "Terraza",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8927,
+        "row_type": "extintor",
+        "created_at": "2020-06-16 06:43:45",
+        "updated_at": "2020-06-16 06:43:45",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "agente": "ABC - Polvo",
+          "cap": 3,
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 8,
+          "elemento_id": null
+        },
+        "extintor": {
+          "id": 1,
+          "agente": "ABC - Polvo",
+          "cap": 3,
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 8,
+          "elemento_id": null
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "idEquipo": null,
+        "cargaVencida": null,
+        "elementoAusente": 0,
+        "elementoObstruido": 0,
+        "carroDefectuoso": null,
+        "equipoUsado": null,
+        "equipoDespintado": null,
+        "equipoDespresurizado": null,
+        "alturaIncorreta": null,
+        "faltaSenializacionEnAltura": null,
+        "faltaSenializacionEnChapa": null,
+        "faltaTarjeta": null,
+        "faltaPrecinto": null,
+        "soporteDefectuoso": null,
+        "medioDeRupturaAusente": null,
+        "mangueraRota": null,
+        "otroProblema": null,
+        "pesoActual": null,
+        "created_at": "2020-06-16 06:43:50",
+        "updated_at": "2020-06-16 11:38:59",
+        "inspeccion_id": 1,
+        "columnas": {
+          "name": "inspeccionbie",
+          "idEquipo": {
+            "tipo": "int",
+            "visible": false,
+            "name": "idEquipo",
+            "muestra": "Id",
+            "verdetalle": true
+          },
+          "cargaVencida": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "cargaVencida",
+            "muestra": "Carga Vencida",
+            "verdetalle": true
+          },
+          "elementoAusente": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Elemento Ausente",
+            "verdetalle": true
+          },
+          "elementoObstruido": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "elementoObstruido",
+            "muestra": "Elemento Obstruido",
+            "verdetalle": true
+          },
+          "carroDefectuoso": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "carroDefectuoso",
+            "muestra": "Carro Defectuoso",
+            "verdetalle": true
+          },
+          "equipoUsado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoUsado",
+            "muestra": "Equipo Usado",
+            "verdetalle": true
+          },
+          "equipoDespintado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoDespintado",
+            "muestra": "Equipo Despintado",
+            "verdetalle": true
+          },
+          "equipoDespresurizado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoDespresurizado",
+            "muestra": "Equipo Despresurizado",
+            "verdetalle": true
+          },
+          "alturaIncorreta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "alturaIncorreta",
+            "muestra": "Altura Incorrecta",
+            "verdetalle": true
+          },
+          "faltaSenializacionEnAltura": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaSenializacionEnAltura",
+            "muestra": "Falta Senialización en Altura",
+            "verdetalle": true
+          },
+          "faltaSenializacionEnChapa": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaSenializacionEnChapa",
+            "muestra": "Falta Senialización en Chapa",
+            "verdetalle": true
+          },
+          "faltaTarjeta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaTarjeta",
+            "muestra": "Falta Tarjeta",
+            "verdetalle": true
+          },
+          "faltaPrecinto": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaPrecinto",
+            "muestra": "Falta Precinto",
+            "verdetalle": true
+          },
+          "soporteDefectuoso": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "soporteDefectuoso",
+            "muestra": "Soporte Defectuoso",
+            "verdetalle": true
+          },
+          "medioDeRupturaAusente": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "medioDeRupturaAusente",
+            "muestra": "Medio de Ruptura Ausente",
+            "verdetalle": true
+          },
+          "mangueraRota": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "mangueraRota",
+            "muestra": "Manguera Rota",
+            "verdetalle": true
+          },
+          "otroProblema": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "otroProblema",
+            "muestra": "Otro Problema",
+            "verdetalle": true
+          },
+          "pesoActual": {
+            "tipo": "int",
+            "visible": true,
+            "name": "pesoActual",
+            "muestra": "Peso Actual",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": null
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionextintor": {
+        "id": 1,
+        "idEquipo": null,
+        "cargaVencida": null,
+        "elementoAusente": 0,
+        "elementoObstruido": 0,
+        "carroDefectuoso": null,
+        "equipoUsado": null,
+        "equipoDespintado": null,
+        "equipoDespresurizado": null,
+        "alturaIncorreta": null,
+        "faltaSenializacionEnAltura": null,
+        "faltaSenializacionEnChapa": null,
+        "faltaTarjeta": null,
+        "faltaPrecinto": null,
+        "soporteDefectuoso": null,
+        "medioDeRupturaAusente": null,
+        "mangueraRota": null,
+        "otroProblema": null,
+        "pesoActual": null,
+        "created_at": "2020-06-16 06:43:50",
+        "updated_at": "2020-06-16 11:38:59",
+        "inspeccion_id": 1,
+        "columnas": {
+          "name": "inspeccionbie",
+          "idEquipo": {
+            "tipo": "int",
+            "visible": false,
+            "name": "idEquipo",
+            "muestra": "Id",
+            "verdetalle": true
+          },
+          "cargaVencida": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "cargaVencida",
+            "muestra": "Carga Vencida",
+            "verdetalle": true
+          },
+          "elementoAusente": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Elemento Ausente",
+            "verdetalle": true
+          },
+          "elementoObstruido": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "elementoObstruido",
+            "muestra": "Elemento Obstruido",
+            "verdetalle": true
+          },
+          "carroDefectuoso": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "carroDefectuoso",
+            "muestra": "Carro Defectuoso",
+            "verdetalle": true
+          },
+          "equipoUsado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoUsado",
+            "muestra": "Equipo Usado",
+            "verdetalle": true
+          },
+          "equipoDespintado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoDespintado",
+            "muestra": "Equipo Despintado",
+            "verdetalle": true
+          },
+          "equipoDespresurizado": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "equipoDespresurizado",
+            "muestra": "Equipo Despresurizado",
+            "verdetalle": true
+          },
+          "alturaIncorreta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "alturaIncorreta",
+            "muestra": "Altura Incorrecta",
+            "verdetalle": true
+          },
+          "faltaSenializacionEnAltura": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaSenializacionEnAltura",
+            "muestra": "Falta Senialización en Altura",
+            "verdetalle": true
+          },
+          "faltaSenializacionEnChapa": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaSenializacionEnChapa",
+            "muestra": "Falta Senialización en Chapa",
+            "verdetalle": true
+          },
+          "faltaTarjeta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaTarjeta",
+            "muestra": "Falta Tarjeta",
+            "verdetalle": true
+          },
+          "faltaPrecinto": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "faltaPrecinto",
+            "muestra": "Falta Precinto",
+            "verdetalle": true
+          },
+          "soporteDefectuoso": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "soporteDefectuoso",
+            "muestra": "Soporte Defectuoso",
+            "verdetalle": true
+          },
+          "medioDeRupturaAusente": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "medioDeRupturaAusente",
+            "muestra": "Medio de Ruptura Ausente",
+            "verdetalle": true
+          },
+          "mangueraRota": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "mangueraRota",
+            "muestra": "Manguera Rota",
+            "verdetalle": true
+          },
+          "otroProblema": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "otroProblema",
+            "muestra": "Otro Problema",
+            "verdetalle": true
+          },
+          "pesoActual": {
+            "tipo": "int",
+            "visible": true,
+            "name": "pesoActual",
+            "muestra": "Peso Actual",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": null
+      }
+    },
+    {
+      "id": 2,
+      "fechahora": "2020-06-30 00:00:00",
+      "idinspeccion": 10362,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionbie",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "Estado Cuerpo Valvula No Cumple, Estado Tapa Valvula No Cumple, Estado Volante No Cumple, Estado Asiento No Apreciable",
+      "observaciones": null,
+      "created_at": "2020-06-16 06:43:50",
+      "updated_at": "2020-06-16 11:39:08",
+      "revision_periodica_id": 4,
+      "puesto_id": 7,
+      "elemento_id": 4,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 7,
+        "nroPuesto": "002",
+        "ubicacion": "Ubicacion",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8926,
+        "row_type": "bie",
+        "created_at": "2020-06-16 06:43:45",
+        "updated_at": "2020-06-16 06:43:45",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 4,
+          "desfavorable": "No",
+          "medidaGAbiente": "45x45",
+          "medidaVidrioGabinete": "11x11",
+          "tieneReduccion": "No",
+          "materialPuertaGabinete": "-",
+          "tipoGabinete": "-",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 7,
+          "elemento_id": 4
+        },
+        "bie": {
+          "id": 4,
+          "desfavorable": "No",
+          "medidaGAbiente": "45x45",
+          "medidaVidrioGabinete": "11x11",
+          "tieneReduccion": "No",
+          "materialPuertaGabinete": "-",
+          "tipoGabinete": "-",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 7,
+          "elemento_id": 4
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "idManguera": null,
+        "union": "storz",
+        "estadoUnion": 1,
+        "junta": 0,
+        "tieneLanza": 1,
+        "lanza": 1,
+        "tieneBoquilla": 1,
+        "boquilla": 1,
+        "boquilla_id": null,
+        "estadoGabinete": 0,
+        "estadoVidrio": 0,
+        "requierePintura": 0,
+        "requiereReemplazoGabinete": 0,
+        "tieneMedioDeRuptura": 0,
+        "cuerpo": 2,
+        "tapaValvula": 2,
+        "volante": 2,
+        "tuerca": 0,
+        "cantidadLlavesDeAjuste": null,
+        "comentarioLlaveDeAjuste": null,
+        "reduccionPresente": 0,
+        "requiereReemplazoValvula": 0,
+        "asiento": 3,
+        "vastago": null,
+        "nichoHidrante": 0,
+        "rompaVidrio": 0,
+        "controles": 0,
+        "inspeccion_id": 2,
+        "columnas": {
+          "name": "inspeccionextintor",
+          "idManguera": {
+            "tipo": "int",
+            "visible": false,
+            "name": "idManguera",
+            "muestra": "Id",
+            "verdetalle": false
+          },
+          "union": {
+            "tipo": "int",
+            "visible": true,
+            "name": "union",
+            "muestra": "Unión",
+            "verdetalle": true
+          },
+          "estadoUnion": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoUnion",
+            "muestra": "Estado de Union",
+            "verdetalle": true
+          },
+          "junta": {
+            "tipo": "int",
+            "visible": true,
+            "name": "junta",
+            "muestra": "Junta",
+            "verdetalle": true
+          },
+          "tieneLanza": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneLanza",
+            "muestra": "Tiene Lanza",
+            "verdetalle": true
+          },
+          "lanza": {
+            "tipo": "int",
+            "visible": true,
+            "name": "lanza",
+            "muestra": "Lanza",
+            "verdetalle": true
+          },
+          "tieneBoquilla": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneBoquilla",
+            "muestra": "Tiene Boquilla",
+            "verdetalle": true
+          },
+          "boquilla": {
+            "tipo": "int",
+            "visible": true,
+            "name": "boquilla",
+            "muestra": "Boquilla",
+            "verdetalle": true
+          },
+          "estadoGabinete": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoGabinete",
+            "muestra": "Estado del Gabinete",
+            "verdetalle": true
+          },
+          "estadoVidrio": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoVidrio",
+            "muestra": "Estado del Vidrio",
+            "verdetalle": true
+          },
+          "requierePintura": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requierePintura",
+            "muestra": "Requiere Pintura",
+            "verdetalle": true
+          },
+          "requiereReemplazoGabinete": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requiereReemplazoGabinete",
+            "muestra": "Requiere Reemplazo Gabinete",
+            "verdetalle": true
+          },
+          "tieneMedioDeRuptura": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneMedioDeRuptura",
+            "muestra": "Tiene Medio de Ruptura",
+            "verdetalle": true
+          },
+          "cuerpo": {
+            "tipo": "int",
+            "visible": true,
+            "name": "cuerpo",
+            "muestra": "Cuerpo",
+            "verdetalle": true
+          },
+          "tapaValvula": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tapaValvula",
+            "muestra": "Tapa Valvula",
+            "verdetalle": true
+          },
+          "volante": {
+            "tipo": "int",
+            "visible": true,
+            "name": "volante",
+            "muestra": "Volante",
+            "verdetalle": true
+          },
+          "tuerca": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tuerca",
+            "muestra": "Tuerca",
+            "verdetalle": true
+          },
+          "cantidadLlavesDeAjuste": {
+            "tipo": "int",
+            "visible": true,
+            "name": "cantidadLlavesDeAjuste",
+            "muestra": "Cantidad Llaves de Ajuste",
+            "verdetalle": true
+          },
+          "comentarioLlaveDeAjuste": {
+            "tipo": "int",
+            "visible": true,
+            "name": "comentarioLlaveDeAjuste",
+            "muestra": "Comentario Llave de Ajuste",
+            "verdetalle": true
+          },
+          "reduccionPresente": {
+            "tipo": "int",
+            "visible": true,
+            "name": "reduccionPresente",
+            "muestra": "Reduccion Presente",
+            "verdetalle": true
+          },
+          "requiereReemplazoValvula": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requiereReemplazoValvula",
+            "muestra": "Requiere Reemplazo de Valvula",
+            "verdetalle": true
+          },
+          "asiento": {
+            "tipo": "int",
+            "visible": true,
+            "name": "asiento",
+            "muestra": "Asiento",
+            "verdetalle": true
+          },
+          "vastago": {
+            "tipo": "int",
+            "visible": true,
+            "name": "vastago",
+            "muestra": "Vastago",
+            "verdetalle": true
+          },
+          "nichoHidrante": {
+            "tipo": "int",
+            "visible": true,
+            "name": "nichoHidrante",
+            "muestra": "Nicho Hidrante",
+            "verdetalle": true
+          },
+          "rompaVidrio": {
+            "tipo": "int",
+            "visible": true,
+            "name": "rompaVidrio",
+            "muestra": "Rompa Vidrio",
+            "verdetalle": true
+          },
+          "controles": {
+            "tipo": "int",
+            "visible": true,
+            "name": "controles",
+            "muestra": "controles",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": null
+      },
+      "elemento": {
+        "id": 4,
+        "sector": null,
+        "codigoInterno": "1300000008006",
+        "disponible": 1,
+        "sustituto": 0,
+        "observaciones": null,
+        "row_type": "mangueras",
+        "uniones": "bronce",
+        "vencimientoDePH": "2020-10-31",
+        "codigoInternoCliente": 0,
+        "longitudReal": 25,
+        "numeroManguera": "000156",
+        "fechaUltimaPH": "10/19",
+        "baja": 0,
+        "lanzanombre": null,
+        "lanzatipo": null,
+        "boquillanombre": "Chorro Pleno",
+        "diametropulgada": 5,
+        "diametromili": 63.5,
+        "longitudmili": "63.5",
+        "elemento_id": 4
+      },
+      "fotos": [],
+      "inspeccionbie": {
+        "id": 1,
+        "idManguera": null,
+        "union": "storz",
+        "estadoUnion": 1,
+        "junta": 0,
+        "tieneLanza": 1,
+        "lanza": 1,
+        "tieneBoquilla": 1,
+        "boquilla": 1,
+        "boquilla_id": null,
+        "estadoGabinete": 0,
+        "estadoVidrio": 0,
+        "requierePintura": 0,
+        "requiereReemplazoGabinete": 0,
+        "tieneMedioDeRuptura": 0,
+        "cuerpo": 2,
+        "tapaValvula": 2,
+        "volante": 2,
+        "tuerca": 0,
+        "cantidadLlavesDeAjuste": null,
+        "comentarioLlaveDeAjuste": null,
+        "reduccionPresente": 0,
+        "requiereReemplazoValvula": 0,
+        "asiento": 3,
+        "vastago": null,
+        "nichoHidrante": 0,
+        "rompaVidrio": 0,
+        "controles": 0,
+        "inspeccion_id": 2,
+        "columnas": {
+          "name": "inspeccionextintor",
+          "idManguera": {
+            "tipo": "int",
+            "visible": false,
+            "name": "idManguera",
+            "muestra": "Id",
+            "verdetalle": false
+          },
+          "union": {
+            "tipo": "int",
+            "visible": true,
+            "name": "union",
+            "muestra": "Unión",
+            "verdetalle": true
+          },
+          "estadoUnion": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoUnion",
+            "muestra": "Estado de Union",
+            "verdetalle": true
+          },
+          "junta": {
+            "tipo": "int",
+            "visible": true,
+            "name": "junta",
+            "muestra": "Junta",
+            "verdetalle": true
+          },
+          "tieneLanza": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneLanza",
+            "muestra": "Tiene Lanza",
+            "verdetalle": true
+          },
+          "lanza": {
+            "tipo": "int",
+            "visible": true,
+            "name": "lanza",
+            "muestra": "Lanza",
+            "verdetalle": true
+          },
+          "tieneBoquilla": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneBoquilla",
+            "muestra": "Tiene Boquilla",
+            "verdetalle": true
+          },
+          "boquilla": {
+            "tipo": "int",
+            "visible": true,
+            "name": "boquilla",
+            "muestra": "Boquilla",
+            "verdetalle": true
+          },
+          "estadoGabinete": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoGabinete",
+            "muestra": "Estado del Gabinete",
+            "verdetalle": true
+          },
+          "estadoVidrio": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoVidrio",
+            "muestra": "Estado del Vidrio",
+            "verdetalle": true
+          },
+          "requierePintura": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requierePintura",
+            "muestra": "Requiere Pintura",
+            "verdetalle": true
+          },
+          "requiereReemplazoGabinete": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requiereReemplazoGabinete",
+            "muestra": "Requiere Reemplazo Gabinete",
+            "verdetalle": true
+          },
+          "tieneMedioDeRuptura": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tieneMedioDeRuptura",
+            "muestra": "Tiene Medio de Ruptura",
+            "verdetalle": true
+          },
+          "cuerpo": {
+            "tipo": "int",
+            "visible": true,
+            "name": "cuerpo",
+            "muestra": "Cuerpo",
+            "verdetalle": true
+          },
+          "tapaValvula": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tapaValvula",
+            "muestra": "Tapa Valvula",
+            "verdetalle": true
+          },
+          "volante": {
+            "tipo": "int",
+            "visible": true,
+            "name": "volante",
+            "muestra": "Volante",
+            "verdetalle": true
+          },
+          "tuerca": {
+            "tipo": "int",
+            "visible": true,
+            "name": "tuerca",
+            "muestra": "Tuerca",
+            "verdetalle": true
+          },
+          "cantidadLlavesDeAjuste": {
+            "tipo": "int",
+            "visible": true,
+            "name": "cantidadLlavesDeAjuste",
+            "muestra": "Cantidad Llaves de Ajuste",
+            "verdetalle": true
+          },
+          "comentarioLlaveDeAjuste": {
+            "tipo": "int",
+            "visible": true,
+            "name": "comentarioLlaveDeAjuste",
+            "muestra": "Comentario Llave de Ajuste",
+            "verdetalle": true
+          },
+          "reduccionPresente": {
+            "tipo": "int",
+            "visible": true,
+            "name": "reduccionPresente",
+            "muestra": "Reduccion Presente",
+            "verdetalle": true
+          },
+          "requiereReemplazoValvula": {
+            "tipo": "int",
+            "visible": true,
+            "name": "requiereReemplazoValvula",
+            "muestra": "Requiere Reemplazo de Valvula",
+            "verdetalle": true
+          },
+          "asiento": {
+            "tipo": "int",
+            "visible": true,
+            "name": "asiento",
+            "muestra": "Asiento",
+            "verdetalle": true
+          },
+          "vastago": {
+            "tipo": "int",
+            "visible": true,
+            "name": "vastago",
+            "muestra": "Vastago",
+            "verdetalle": true
+          },
+          "nichoHidrante": {
+            "tipo": "int",
+            "visible": true,
+            "name": "nichoHidrante",
+            "muestra": "Nicho Hidrante",
+            "verdetalle": true
+          },
+          "rompaVidrio": {
+            "tipo": "int",
+            "visible": true,
+            "name": "rompaVidrio",
+            "muestra": "Rompa Vidrio",
+            "verdetalle": true
+          },
+          "controles": {
+            "tipo": "int",
+            "visible": true,
+            "name": "controles",
+            "muestra": "controles",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": null
+      }
+    },
+    {
+      "id": 3,
+      "fechahora": "2020-06-16 00:00:00",
+      "idinspeccion": 10364,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionecasegusur",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "Campana no cumple, Valvula purga no cumple, Manometro no cumple",
+      "observaciones": null,
+      "created_at": "2020-06-16 06:43:50",
+      "updated_at": "2020-06-16 11:39:09",
+      "revision_periodica_id": 4,
+      "puesto_id": 9,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 9,
+        "nroPuesto": "090",
+        "ubicacion": "Juan",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8928,
+        "row_type": "ecasegusur",
+        "created_at": "2020-06-16 06:43:45",
+        "updated_at": "2020-06-16 06:43:45",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "codigoElemento": "994AA",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 9
+        },
+        "ecasegusur": {
+          "id": 1,
+          "codigoElemento": "994AA",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 9
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "elementoAusente": "No",
+        "campana": "0",
+        "valvula_purga": "0",
+        "manometro": "0",
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 3,
+        "columnas": {
+          "0": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "conversion": "no"
+          },
+          "1": {
+            "tipo": "string",
+            "visible": true,
+            "name": "campana",
+            "muestra": "Estado Campana"
+          },
+          "2": {
+            "tipo": "string",
+            "visible": true,
+            "name": "valvula_purga",
+            "muestra": "Valvula de Purga"
+          },
+          "3": {
+            "tipo": "string",
+            "visible": true,
+            "name": "manometro",
+            "muestra": "Estado Manómetro"
+          },
+          "4": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "conversion": "no"
+          },
+          "5": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion"
+          },
+          "name": "inspeccionecasegusurs"
+        },
+        "codigoelemento": "994AA"
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionecasegusur": {
+        "id": 1,
+        "elementoAusente": "No",
+        "campana": "0",
+        "valvula_purga": "0",
+        "manometro": "0",
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 3,
+        "columnas": {
+          "0": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "conversion": "no"
+          },
+          "1": {
+            "tipo": "string",
+            "visible": true,
+            "name": "campana",
+            "muestra": "Estado Campana"
+          },
+          "2": {
+            "tipo": "string",
+            "visible": true,
+            "name": "valvula_purga",
+            "muestra": "Valvula de Purga"
+          },
+          "3": {
+            "tipo": "string",
+            "visible": true,
+            "name": "manometro",
+            "muestra": "Estado Manómetro"
+          },
+          "4": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "conversion": "no"
+          },
+          "5": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion"
+          },
+          "name": "inspeccionecasegusurs"
+        },
+        "codigoelemento": "994AA"
+      }
+    },
+    {
+      "id": 4,
+      "fechahora": "2020-06-16 00:00:00",
+      "idinspeccion": 10369,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionduchasegusur",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "Presion incorrecta, Manija accionadora no cumple",
+      "observaciones": null,
+      "created_at": "2020-06-16 07:21:40",
+      "updated_at": "2020-06-16 11:39:10",
+      "revision_periodica_id": 4,
+      "puesto_id": 10,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 10,
+        "nroPuesto": "123123",
+        "ubicacion": "baños",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8934,
+        "row_type": "duchasegusur",
+        "created_at": "2020-06-16 07:21:34",
+        "updated_at": "2020-06-16 07:21:34",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "codigoElemento": "1258",
+          "mismoElemento": "No",
+          "tipo_ducha": "Lavaojos",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 10
+        },
+        "duchasegusur": {
+          "id": 1,
+          "codigoElemento": "1258",
+          "mismoElemento": "No",
+          "tipo_ducha": "Lavaojos",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 10
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "elementoAusente": "No",
+        "ducha": null,
+        "lavaojos": 1,
+        "valvula": 1,
+        "presion_correcta": 0,
+        "manija_accionadora": 0,
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 4,
+        "columnas": {
+          "name": "inspeccionduchaegusurs",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "ducha": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "ducha",
+            "muestra": "Ducha",
+            "verdetalle": true
+          },
+          "lavaojos": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "lavaojos",
+            "muestra": "Lavaojos",
+            "verdetalle": true
+          },
+          "valvula": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "valvula",
+            "muestra": "Valvula",
+            "verdetalle": true
+          },
+          "presion_correcta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "presion_correcta",
+            "muestra": "Presion Correcta",
+            "verdetalle": true
+          },
+          "manija_accionadora": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "manija_accionadora",
+            "muestra": "Manija Accionadora",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": false
+          }
+        },
+        "codigoelemento": "1258"
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionduchasegusur": {
+        "id": 1,
+        "elementoAusente": "No",
+        "ducha": null,
+        "lavaojos": 1,
+        "valvula": 1,
+        "presion_correcta": 0,
+        "manija_accionadora": 0,
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 4,
+        "columnas": {
+          "name": "inspeccionduchaegusurs",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "ducha": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "ducha",
+            "muestra": "Ducha",
+            "verdetalle": true
+          },
+          "lavaojos": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "lavaojos",
+            "muestra": "Lavaojos",
+            "verdetalle": true
+          },
+          "valvula": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "valvula",
+            "muestra": "Valvula",
+            "verdetalle": true
+          },
+          "presion_correcta": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "presion_correcta",
+            "muestra": "Presion Correcta",
+            "verdetalle": true
+          },
+          "manija_accionadora": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "manija_accionadora",
+            "muestra": "Manija Accionadora",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": false
+          }
+        },
+        "codigoelemento": "1258"
+      }
+    },
+    {
+      "id": 5,
+      "fechahora": "2020-06-09 00:00:00",
+      "idinspeccion": 10370,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionescalerasegusur",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "Escalera en mal estado",
+      "observaciones": null,
+      "created_at": "2020-06-16 07:21:40",
+      "updated_at": "2020-06-16 11:39:11",
+      "revision_periodica_id": 4,
+      "puesto_id": 11,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 11,
+        "nroPuesto": "12545",
+        "ubicacion": "fondo exterior",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8935,
+        "row_type": "esacalerasegusur",
+        "created_at": "2020-06-16 07:21:34",
+        "updated_at": "2020-06-16 07:21:34",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "codigoElemento": "1255",
+          "mismoElemento": "0",
+          "modelo": "Portátil con plataforma y baranda",
+          "descripcion": "escalera salida exterior",
+          "cantidad_escalones": 50,
+          "anio": null,
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 11
+        },
+        "esacalerasegusur": {
+          "id": 1,
+          "codigoElemento": "1255",
+          "mismoElemento": "0",
+          "modelo": "Portátil con plataforma y baranda",
+          "descripcion": "escalera salida exterior",
+          "cantidad_escalones": 50,
+          "anio": null,
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 11
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "elementoAusente": "No",
+        "estado_escalera": "Mal",
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 5,
+        "columnas": {
+          "0": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "conversion": "no"
+          },
+          "1": {
+            "tipo": "string",
+            "visible": true,
+            "name": "estado_escalera",
+            "muestra": "Estado Escalera",
+            "conversion": "no"
+          },
+          "2": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "conversion": "no"
+          },
+          "3": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion"
+          },
+          "name": "inspeccionescalerasegusurs"
+        },
+        "codigoelemento": "1255"
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionescalerasegusur": {
+        "id": 1,
+        "elementoAusente": "No",
+        "estado_escalera": "Mal",
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 5,
+        "columnas": {
+          "0": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "conversion": "no"
+          },
+          "1": {
+            "tipo": "string",
+            "visible": true,
+            "name": "estado_escalera",
+            "muestra": "Estado Escalera",
+            "conversion": "no"
+          },
+          "2": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "conversion": "no"
+          },
+          "3": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion"
+          },
+          "name": "inspeccionescalerasegusurs"
+        },
+        "codigoelemento": "1255"
+      }
+    },
+    {
+      "id": 6,
+      "fechahora": "2020-06-24 00:00:00",
+      "idinspeccion": 10371,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionkitsegusur",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "No tiene ID Equipo, No tiene Bolsa Amarilla, No tiene Mameluco Tyvex, No tiene Antiparra, No tiene Guantes, No tiene Caja Amarilla Chica, No tiene Caja Amarilla Grande, No tiene Cordones Absorbentes, No tiene VRM",
+      "observaciones": null,
+      "created_at": "2020-06-16 07:22:42",
+      "updated_at": "2020-06-16 11:39:12",
+      "revision_periodica_id": 4,
+      "puesto_id": 12,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 12,
+        "nroPuesto": "487547",
+        "ubicacion": "deposito 1",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8936,
+        "row_type": "kitegusur",
+        "created_at": "2020-06-16 07:21:34",
+        "updated_at": "2020-06-16 07:21:34",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "codigoElemento": "456",
+          "mismoElemento": "No",
+          "modelo": "Modelo 1",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 12
+        },
+        "kitegusur": {
+          "id": 1,
+          "codigoElemento": "456",
+          "mismoElemento": "No",
+          "modelo": "Modelo 1",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 12
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "elementoAusente": "No",
+        "gramillaAbsorbente": 1,
+        "tieneIDEquipo": 0,
+        "tieneBolsaAmarilla": 0,
+        "tieneMamelucoTyvex": 0,
+        "tieneAntiparra": 0,
+        "tieneGuantes": 0,
+        "tieneCajaAmarillaChica": 0,
+        "tieneCajaAmarillaGrande": 0,
+        "tieneCordonesAbsorbentes": 0,
+        "tieneVRM": 0,
+        "mascaraID": null,
+        "estadoMascara": null,
+        "vtoFiltroMascara": null,
+        "codigoElementoEncontrado": "1254",
+        "inspeccion_id": 6,
+        "columnas": {
+          "name": "inspeccionkitsegusurs",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "gramillaAbsorbente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "gramillaAbsorbente",
+            "muestra": "Gramilla Absorbente",
+            "verdetalle": true
+          },
+          "tieneIDEquipo": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneIDEquipo",
+            "muestra": "Tiene ID Equipo",
+            "verdetalle": true
+          },
+          "tieneBolsaAmarilla": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneBolsaAmarilla",
+            "muestra": "Tiene Bolsa Amarilla",
+            "verdetalle": true
+          },
+          "tieneMamelucoTyvex": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneMamelucoTyvex",
+            "muestra": "Tiene Mameluco Tyvex",
+            "verdetalle": true
+          },
+          "tieneAntiparra": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneAntiparra",
+            "muestra": "Tiene Antiparra",
+            "verdetalle": true
+          },
+          "tieneGuantes": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneGuantes",
+            "muestra": "Tiene Guantes",
+            "verdetalle": true
+          },
+          "tieneCajaAmarillaChica": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCajaAmarillaChica",
+            "muestra": "Tiene Caja Amarilla Chica",
+            "verdetalle": true
+          },
+          "tieneCajaAmarillaGrande": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCajaAmarillaGrande",
+            "muestra": "Tiene Caja Amarilla Grande",
+            "verdetalle": true
+          },
+          "tieneCordonesAbsorbentes": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCordonesAbsorbentes",
+            "muestra": "Tiene Cordones Absorbentes",
+            "verdetalle": true
+          },
+          "tieneVRM": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneVRM",
+            "muestra": "Tiene VRM",
+            "verdetalle": true
+          },
+          "mascaraID": {
+            "tipo": "string",
+            "visible": true,
+            "name": "mascaraID",
+            "muestra": "Mascara ID",
+            "verdetalle": true
+          },
+          "estadoMascara": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoMascara",
+            "muestra": "Estado Mascara",
+            "verdetalle": true
+          },
+          "vtoFiltroMascara": {
+            "tipo": "string",
+            "visible": true,
+            "name": "vtoFiltroMascara",
+            "muestra": "Vto Filtro Mascara",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "int",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Codigo Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": false
+          }
+        },
+        "codigoelemento": "456"
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionkitsegusur": {
+        "id": 1,
+        "elementoAusente": "No",
+        "gramillaAbsorbente": 1,
+        "tieneIDEquipo": 0,
+        "tieneBolsaAmarilla": 0,
+        "tieneMamelucoTyvex": 0,
+        "tieneAntiparra": 0,
+        "tieneGuantes": 0,
+        "tieneCajaAmarillaChica": 0,
+        "tieneCajaAmarillaGrande": 0,
+        "tieneCordonesAbsorbentes": 0,
+        "tieneVRM": 0,
+        "mascaraID": null,
+        "estadoMascara": null,
+        "vtoFiltroMascara": null,
+        "codigoElementoEncontrado": "1254",
+        "inspeccion_id": 6,
+        "columnas": {
+          "name": "inspeccionkitsegusurs",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "gramillaAbsorbente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "gramillaAbsorbente",
+            "muestra": "Gramilla Absorbente",
+            "verdetalle": true
+          },
+          "tieneIDEquipo": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneIDEquipo",
+            "muestra": "Tiene ID Equipo",
+            "verdetalle": true
+          },
+          "tieneBolsaAmarilla": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneBolsaAmarilla",
+            "muestra": "Tiene Bolsa Amarilla",
+            "verdetalle": true
+          },
+          "tieneMamelucoTyvex": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneMamelucoTyvex",
+            "muestra": "Tiene Mameluco Tyvex",
+            "verdetalle": true
+          },
+          "tieneAntiparra": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneAntiparra",
+            "muestra": "Tiene Antiparra",
+            "verdetalle": true
+          },
+          "tieneGuantes": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneGuantes",
+            "muestra": "Tiene Guantes",
+            "verdetalle": true
+          },
+          "tieneCajaAmarillaChica": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCajaAmarillaChica",
+            "muestra": "Tiene Caja Amarilla Chica",
+            "verdetalle": true
+          },
+          "tieneCajaAmarillaGrande": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCajaAmarillaGrande",
+            "muestra": "Tiene Caja Amarilla Grande",
+            "verdetalle": true
+          },
+          "tieneCordonesAbsorbentes": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneCordonesAbsorbentes",
+            "muestra": "Tiene Cordones Absorbentes",
+            "verdetalle": true
+          },
+          "tieneVRM": {
+            "tipo": "bool",
+            "visible": true,
+            "name": "tieneVRM",
+            "muestra": "Tiene VRM",
+            "verdetalle": true
+          },
+          "mascaraID": {
+            "tipo": "string",
+            "visible": true,
+            "name": "mascaraID",
+            "muestra": "Mascara ID",
+            "verdetalle": true
+          },
+          "estadoMascara": {
+            "tipo": "int",
+            "visible": true,
+            "name": "estadoMascara",
+            "muestra": "Estado Mascara",
+            "verdetalle": true
+          },
+          "vtoFiltroMascara": {
+            "tipo": "string",
+            "visible": true,
+            "name": "vtoFiltroMascara",
+            "muestra": "Vto Filtro Mascara",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "int",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Codigo Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": false
+          }
+        },
+        "codigoelemento": "456"
+      }
+    },
+    {
+      "id": 7,
+      "fechahora": "2020-07-01 00:00:00",
+      "idinspeccion": 10372,
+      "codigoControl": null,
+      "estado": 1,
+      "recomendacion": "0",
+      "elementoAusente": 0,
+      "elementoObstruido": 0,
+      "elementoIncompatible": 0,
+      "elementoVencido": 0,
+      "elementoNoRegistrado": 0,
+      "elementoSustituto": 0,
+      "row_type": "inspeccionpuertasegusur",
+      "codigoSustituto": null,
+      "codigoEquipoSustituto": null,
+      "incidencias": "Cartel Señalizacion no cumple",
+      "observaciones": null,
+      "created_at": "2020-06-16 07:22:42",
+      "updated_at": "2020-06-16 11:39:11",
+      "revision_periodica_id": 4,
+      "puesto_id": 13,
+      "elemento_id": null,
+      "columnas": {
+        "fechahora": {
+          "tipo": "date",
+          "visible": true,
+          "name": "fechahora",
+          "muestra": "Fecha de Inspección",
+          "verdetalle": true
+        },
+        "sectornombre": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.sector.nombre",
+          "muestra": "Sector",
+          "verdetalle": false
+        },
+        "nroPuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.nroPuesto",
+          "muestra": "Nro Puesto",
+          "verdetalle": true
+        },
+        "ubicacionpuesto": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.ubicacion",
+          "muestra": "Puesto",
+          "verdetalle": true
+        },
+        "puestorowtype": {
+          "tipo": "string",
+          "visible": true,
+          "name": "puesto.row_type",
+          "muestra": "Tipo",
+          "func": "row_type",
+          "verdetalle": false
+        },
+        "estado": {
+          "tipo": "int",
+          "visible": true,
+          "name": "estado",
+          "muestra": "Estado",
+          "func": "estado",
+          "verdetalle": true
+        },
+        "incidencias": {
+          "tipo": "string",
+          "visible": true,
+          "name": "incidencias",
+          "muestra": "Incidencias",
+          "verdetalle": false
+        },
+        "observaciones": {
+          "tipo": "string",
+          "visible": true,
+          "name": "observaciones",
+          "muestra": "Observaciones",
+          "verdetalle": false
+        },
+        "imagenes": {
+          "tipo": "template-datos",
+          "visible": true,
+          "name": "imagenes",
+          "muestra": "Imagenes",
+          "verdetalle": false
+        },
+        "btnaccion": {
+          "tipo": "template-button",
+          "visible": true,
+          "name": "accion",
+          "muestra": "Detalle",
+          "verdetalle": false
+        }
+      },
+      "ColParticulares": {
+        "inspeccionextintor": [],
+        "inspeccionbie": [],
+        "inspeccionkitsegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionpuertasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionescalerasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionduchasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        },
+        "inspeccionecasegusur": {
+          "codigoElemento": {
+            "tipo": "string",
+            "visible": false,
+            "name": "puesto.tipopuesto.codigoElemento",
+            "muestra": "Código Elemento",
+            "verdetalle": true
+          }
+        }
+      },
+      "puesto": {
+        "id": 13,
+        "nroPuesto": "12454",
+        "ubicacion": "frente",
+        "habilitado": 1,
+        "idSector": 839,
+        "idPuesto": 8937,
+        "row_type": "puertasegusur",
+        "created_at": "2020-06-16 07:21:34",
+        "updated_at": "2020-06-16 07:21:34",
+        "sector_id": 4,
+        "tipopuesto": {
+          "id": 1,
+          "codigoElemento": "125",
+          "tipo_puerta": "Doble",
+          "tiene_barral": "No",
+          "tiene_cerradura": "No",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 13
+        },
+        "puertasegusur": {
+          "id": 1,
+          "codigoElemento": "125",
+          "tipo_puerta": "Doble",
+          "tiene_barral": "No",
+          "tiene_cerradura": "No",
+          "created_at": "2020-06-16 07:21:34",
+          "updated_at": "2020-06-16 11:38:59",
+          "puesto_id": 13
+        },
+        "sector": {
+          "id": 4,
+          "idsector": 839,
+          "numero": "0",
+          "nombre": "General Food",
+          "created_at": "2020-06-16 06:43:45",
+          "updated_at": "2020-06-16 06:43:45",
+          "sucursales_id": 2
+        }
+      },
+      "DetalleInspeccion": {
+        "id": 1,
+        "elementoAusente": "0",
+        "cartel_senializacion": "0",
+        "barral": null,
+        "cerradura": null,
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 7,
+        "columnas": {
+          "name": "DetalleInspeccion",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "cartel_senializacion": {
+            "tipo": "string",
+            "visible": true,
+            "name": "cartel_senializacion",
+            "muestra": "Cartel Señalizacion",
+            "verdetalle": true
+          },
+          "barral": {
+            "tipo": "string",
+            "visible": true,
+            "name": "barral",
+            "muestra": "Barral en Condiciones",
+            "verdetalle": true
+          },
+          "cerradura": {
+            "tipo": "string",
+            "visible": true,
+            "name": "cerradura",
+            "muestra": "Cerradura en Condiciones",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": "125"
+      },
+      "elemento": null,
+      "fotos": [],
+      "inspeccionpuertasegusur": {
+        "id": 1,
+        "elementoAusente": "0",
+        "cartel_senializacion": "0",
+        "barral": null,
+        "cerradura": null,
+        "codigoElementoEncontrado": null,
+        "inspeccion_id": 7,
+        "columnas": {
+          "name": "DetalleInspeccion",
+          "elementoAusente": {
+            "tipo": "string",
+            "visible": true,
+            "name": "elementoAusente",
+            "muestra": "Ausente",
+            "verdetalle": true
+          },
+          "cartel_senializacion": {
+            "tipo": "string",
+            "visible": true,
+            "name": "cartel_senializacion",
+            "muestra": "Cartel Señalizacion",
+            "verdetalle": true
+          },
+          "barral": {
+            "tipo": "string",
+            "visible": true,
+            "name": "barral",
+            "muestra": "Barral en Condiciones",
+            "verdetalle": true
+          },
+          "cerradura": {
+            "tipo": "string",
+            "visible": true,
+            "name": "cerradura",
+            "muestra": "Cerradura en Condiciones",
+            "verdetalle": true
+          },
+          "codigoElementoEncontrado": {
+            "tipo": "string",
+            "visible": true,
+            "name": "codigoElementoEncontrado",
+            "muestra": "Cod. Ele. Encontrado",
+            "verdetalle": true
+          },
+          "inspeccion_id": {
+            "tipo": "int",
+            "visible": false,
+            "name": "inspeccion_id",
+            "muestra": "Id Inspeccion",
+            "verdetalle": true
+          }
+        },
+        "codigoelemento": "125"
+      }
+    }
+  ]
+}

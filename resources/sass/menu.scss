@@ -1,0 +1,122 @@
+#menu, .nav {
+  border-radius: 10px;
+}
+li > a {
+    color: $li-a-color;//#ffffff;
+    text-decoration:$li-a-decoration;// none;
+    background-color:$li-a-background;// transparent;
+  }
+  
+  li > a:hover {
+    color: $li-a-hover-color;//#365c36;
+    text-decoration: $li-a-hover-decoration;//underline;
+    @if $li-a-hover-background !='none'{
+      background-color:$li-a-hover-background;
+      color:$li-a-color;
+    }
+  }
+  
+  a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:not([href]):not([tabindex]):hover,
+  a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:not([href]):not([tabindex]):focus {
+    outline: 0;
+  }
+  
+.nav {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: $nav-color;// #0fa04d;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    text-decoration: none;
+  }
+  
+  .nav-link.disabled {
+    color:$link-disabled-color;// #6c757d;
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .nav-tabs {
+    border-bottom: 1px solid #e34915;
+  }
+  
+  .nav-tabs .nav-item {
+    margin-bottom: -1px;
+  }
+  
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  
+  .nav-tabs .nav-link:hover,
+  .nav-tabs .nav-link:focus {
+    border-color: $nav-color $nav-color $nav-color;
+  }
+  
+  .nav-tabs .nav-link.disabled {
+    color: #6c757d;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: $link-disabled-color;
+    background-color:$link-background;
+    border-color: $link-border $link-border $link-border;
+  }
+  
+  .nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .nav-pills .nav-link {
+    border-radius: 0.25rem;
+  }
+  
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #e34915;
+  }
+  
+  .nav-fill .nav-item {
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .nav-justified .nav-item {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    text-align: center;
+  }
+  .fa-sign-out{
+    transform: rotate(180deg);
+  }

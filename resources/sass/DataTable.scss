@@ -1,0 +1,77 @@
+.header{
+    background-color: $header-background;
+    
+}
+.alert-table{
+    position: relative;
+    padding: 0.65rem 1.25rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.vuetable >thead > tr {
+    background:$table-thead-tr-background;
+    color:$table-thead-tr-color;
+    text-align:$table-thead-tr-text-align;
+    font-size: $table-thead-tr-font-size;
+
+}
+.vuetable >thead > tr > th{
+    cursor: auto;
+}
+.vuetable-body > tr > td {
+    /*vertical-align: baseline;¨*/
+}
+.vuetable-body > tr >td{
+    font-size: 12px;
+    text-align: center;
+}
+
+.md{
+    .header{
+        background-color: $header-background;
+        
+    }
+   
+    .alert-table{
+        position: relative;
+        padding: 0.65rem 1.25rem;
+        margin-bottom: 0;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+    .vuetable >thead > tr {
+        background:$table-thead-tr-background;
+        color:$table-thead-tr-color;
+        text-align:$table-thead-tr-text-align;
+        font-size: 11px;
+        vertical-align: middle;
+
+    }
+    .vuetable >thead > tr > th{
+        cursor: auto;
+        
+        border-bottom: 2px solid #dee2e6; 
+    }
+    
+    .vuetable-body > tr >td{
+        font-size: 10px;
+        text-align: center;
+        color: rgba(26, 27, 26, 0.925);
+        vertical-align: baseline;
+    }
+}
+
+div > .modal{
+    overflow: auto;
+}
+.mostar{ display:block; }
+.ocultar{ display:none; }
+.visibilidad { display:none;}
+
+
+
+
+
+   
+    

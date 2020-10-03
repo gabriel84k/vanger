@@ -1,0 +1,73 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+ 
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #d5ae22c7;
+$orangeClear: #ffcc36;
+$yellow: #030303;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+/* CSS MIS EXTINTORES*/
+
+// Login -
+$bar-manc:$red !important;
+$btn-background:#323539f7;
+$btn-border: #3c4149;
+$btn-color: #fff;
+$btn-ho-background:$red;
+$btn-ho-border:#4f555f;
+$navbar-brand-focus :#51527c;
+$nav-link-focus:#51527c;
+
+
+//Menu -
+$li-a-color: #ffffff;
+$li-a-decoration: none;
+$li-a-background: transparent;
+$li-a-hover-color:$red;
+$li-a-hover-background:'none';   // #51527c;
+$li-a-hover-decoration: underline;
+$nav-color:#8d8d8de0;
+$link-disabled-color:#495057;
+$link-background: #f8fafc;
+$link-border: #dee2e6 #dee2e6 #f8fafc;
+
+//button
+$btn-success-color:#fff;
+$btn-success-background: #323539f7;
+$btn-success-border: #3c4149;
+
+$btn-success-hover-color:#fff;
+$btn-success-hover-background: $red;
+$btn-success-hover-border: #4f555f;
+
+//DataTable
+$header-background:#000000;
+$table-thead-tr-background: #0e0d0db7;
+$table-thead-tr-color: #fff;
+$table-thead-tr-text-align: center;
+$table-thead-tr-font-size: 12px;
+$page-item-background:#32353996;
+
+//link a
+$a:$btn-success-background;
+
+//logoinicio
+$logoiniciomas: 15%;
+$logoiniciomenos: 20%;
+
+//Footer Imagen
+$footimagenmas:136%;
+$footimagenmenos:100%;
