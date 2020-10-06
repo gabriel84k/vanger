@@ -52,13 +52,15 @@
             <table class="table text-center">
                 <thead class="cabeza">
                     <tr class="text-center">
-                        <th >Nº Cert.</th>
-                        <th >N° EXT./SSF</th>
+                       						
+                        <th >Nro Equipo</th>
+                        <th >Ubicación</th>
                         <th >Agente</th>
                         <th >Marca</th>
-                        <th >Cap.</th>
-                        <th >VTO. MANT</th>
-                        <th >VTO. PH</th>
+                        <th >Capacidad</th>
+                        <th >FF</th>
+                        <th >VTO. Carga</th>
+                        
                         
                     </tr>
                 </thead> 
@@ -70,29 +72,26 @@
 
                     {{  $VCaño=date_format(date_create($item->vencimiento_carga),"Y")}}
                     {{  $VCmes=date_format(date_create($item->vencimiento_carga),"m")}}
-                    {{  $PHaño=date_format(date_create($item->vencimiento_ph),"Y")}}
-                    {{  $PHmes=date_format(date_create($item->vencimiento_ph),"m")}}
                     
-                        @if (($año >= $VCaño && $VCmes < $mes) || ($VCaño < $año) || ($año >= $PHaño && $PHmes < $mes) || ($PHaño < $año))
+                    
+                        @if (($año >= $VCaño && $VCmes < $mes) || ($VCaño < $año))
                             <tr style="background-color: rgb(218, 160, 160);">
                                 <td>{{$item->nro_equipo_evolution}}</td>
-                                <td>{{$item->codigo_interno_cliente}}</td>
+                                <td>{{$item->ubicacion}}</td>
                                 <td>{{$item->tipo}}</td>
                                 <td>{{$item->marca}}</td>
                                 <td>{{$item->capacidad.' '.$item->unidad}}</td>
                                 <td>{{$VCmes.'/'.$VCaño}}</td>
-                                <td>{{$PHmes.'/'.$PHaño}}</td>
                             
                             </tr> 
                         @else
                             <tr>
                                 <td>{{$item->nro_equipo_evolution}}</td>
-                                <td>{{$item->codigo_interno_cliente}}</td>
+                                <td>{{$item->ubicacion}}</td>
                                 <td>{{$item->tipo}}</td>
                                 <td>{{$item->marca}}</td>
                                 <td>{{$item->capacidad.' '.$item->unidad}}</td>
                                 <td>{{$VCmes.'/'.$VCaño}}</td>
-                                <td>{{$PHmes.'/'.$PHaño}}</td>
 
                             </tr> 
                         @endif
@@ -151,10 +150,10 @@
                                 <td colspan="3" style="width: 14em;">
                                     <div class="col-lg-6" >
                                         <br>
-                                        <img src="logo/FIRMA/firma.png" style="width: 14em;">
+                                        
                                         __________________________
                                         <div class="text-left">
-                                            <div class="col-lg-2" >
+                                            <!--<div class="col-lg-2" >
                                                 <b>Germán Ricardo Alvarez</b>
                                             </div>
                                             <div class="col-lg-2" >
@@ -165,7 +164,7 @@
                                             </div>
                                             <div class="col-lg-2" >
                                                 21-13.456.789.4
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </td>
