@@ -14,14 +14,14 @@
                             <img src="logo/sigex_pdf.png" style="width: 100px;">
                         </th>
                         <th  scope="col">
-                            <h5 style="font-size: 14px;">REPORTE DE EXTINTORES/SSF</h5>
+                            <h5 style="font-size: 14px;">REPORTE DE EXTINTORES</h5>
                         </th>
                         <th scope="col"> 
                             <h5 style="font-size: 10px;" class="info">
-                                +342 453654  - +342 2981520
-                                ventas@sigex.com.ar
-                                Parque Tecnológico Litoral Centro – Ruta Nacional 168 – Paraje «El Pozo»
-                                www.Sigex.com.ar
+                                Office: +54 297- 4480206
+                                vangersrl@gmail.com
+                                Vanger S.R.L. - Los Molles 603 - Jose Perez 3575 - Comodoro Rivadavia  (Chubut)
+                                www.Vangersrl.com
                             </h5>
                                 
                         </th>
@@ -52,15 +52,13 @@
             <table class="table text-center">
                 <thead class="cabeza">
                     <tr class="text-center">
-                       						
-                        <th >Nro Equipo</th>
-                        <th >Ubicación</th>
+                        <th >Nº Cert.</th>
+                        <th >N° EXT./SSF</th>
                         <th >Agente</th>
                         <th >Marca</th>
-                        <th >Capacidad</th>
-                        <th >FF</th>
-                        <th >VTO. Carga</th>
-                        
+                        <th >Cap.</th>
+                        <th >VTO. MANT</th>
+                        <th >VTO. PH</th>
                         
                     </tr>
                 </thead> 
@@ -72,26 +70,29 @@
 
                     {{  $VCaño=date_format(date_create($item->vencimiento_carga),"Y")}}
                     {{  $VCmes=date_format(date_create($item->vencimiento_carga),"m")}}
+                    {{  $PHaño=date_format(date_create($item->vencimiento_ph),"Y")}}
+                    {{  $PHmes=date_format(date_create($item->vencimiento_ph),"m")}}
                     
-                    
-                        @if (($año >= $VCaño && $VCmes < $mes) || ($VCaño < $año))
+                        @if (($año >= $VCaño && $VCmes < $mes) || ($VCaño < $año) || ($año >= $PHaño && $PHmes < $mes) || ($PHaño < $año))
                             <tr style="background-color: rgb(218, 160, 160);">
                                 <td>{{$item->nro_equipo_evolution}}</td>
-                                <td>{{$item->ubicacion}}</td>
+                                <td>{{$item->codigo_interno_cliente}}</td>
                                 <td>{{$item->tipo}}</td>
                                 <td>{{$item->marca}}</td>
                                 <td>{{$item->capacidad.' '.$item->unidad}}</td>
                                 <td>{{$VCmes.'/'.$VCaño}}</td>
+                                <td>{{$PHmes.'/'.$PHaño}}</td>
                             
                             </tr> 
                         @else
                             <tr>
                                 <td>{{$item->nro_equipo_evolution}}</td>
-                                <td>{{$item->ubicacion}}</td>
+                                <td>{{$item->codigo_interno_cliente}}</td>
                                 <td>{{$item->tipo}}</td>
                                 <td>{{$item->marca}}</td>
                                 <td>{{$item->capacidad.' '.$item->unidad}}</td>
                                 <td>{{$VCmes.'/'.$VCaño}}</td>
+                                <td>{{$PHmes.'/'.$PHaño}}</td>
 
                             </tr> 
                         @endif
@@ -140,34 +141,7 @@
                     <table>
                         <tbody>
                             <tr class="text-center">
-                                <td colspan="2" style="width: 35em;">
-                                    <div class="col-lg-6">
-                                        <div style="height:7em;"></div>
-                                        ________________________          
-                                        <p>Recibí Conforme</p>
-                                    </div>
-                                </td>
-                                <td colspan="3" style="width: 14em;">
-                                    <div class="col-lg-6" >
-                                        <br>
-                                        
-                                        __________________________
-                                        <div class="text-left">
-                                            <!--<div class="col-lg-2" >
-                                                <b>Germán Ricardo Alvarez</b>
-                                            </div>
-                                            <div class="col-lg-2" >
-                                                Ing. Civil Industrial
-                                            </div>
-                                            <div class="col-lg-2" >
-                                                <b>Soc. Acman Ltda.</b>
-                                            </div>
-                                            <div class="col-lg-2" >
-                                                21-13.456.789.4
-                                            </div>-->
-                                        </div>
-                                    </div>
-                                </td>
+                               
                             </tr>
                         </tbody>
                     </table>
