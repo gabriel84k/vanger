@@ -26,6 +26,7 @@ class CreateEquiposTable extends Migration
             $table->string('fecha_ultimo_ph',10)->nullable();
             $table->string('sector',100)->nullable();
             $table->string('codigo_interno_cliente',20)->nullable();
+            $table->string('codigoInterno',20)->nullable();
             $table->date('vencimiento_carga');
             $table->date('vencimiento_ph');
             $table->date('vencimientoVidaUtil')->nullable();
