@@ -22,10 +22,10 @@ class CreateReparacionesTable extends Migration
             
             #[  Se crean las restricciones de clave externa para:sectores_id y equipos_id]
                 $table->bigInteger('servicio_id')->unsigned()->index();
-                $table->foreign('servicio_id')->references('id')->on('servicios');
+                $table->foreign('servicio_id')->references('id')->on('servicios')->onDelete('cascade');
 
                 $table->bigInteger('repuesto_id')->unsigned()->index();
-                $table->foreign('repuesto_id')->references('id')->on('repuestos');    
+                $table->foreign('repuesto_id')->references('id')->on('repuestos')->onDelete('cascade');   
 
             
         });

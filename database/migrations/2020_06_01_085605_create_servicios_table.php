@@ -39,12 +39,13 @@ class CreateServiciosTable extends Migration
             $table->string('inspeccionVisual',50)->nullable(); 
             $table->string('recipiente',50)->nullable(); 
             $table->integer('idOperadorInspeccion')->nullable(); 
+            $table->string('operadorInspeccion',200)->nullable(); 
             $table->integer('numeroCertificadoCarga')->nullable(); 
             $table->integer('numeroCertificadoPH')->nullable(); 
 
             #[  Se crean las restricciones de clave externa para:sectores_id y equipos_id]
                 $table->bigInteger('planilla_id')->unsigned()->index();
-                $table->foreign('planilla_id')->references('id')->on('planillas');
+                $table->foreign('planilla_id')->references('id')->on('planillas')->onDelete('cascade');
 
                 $table->bigInteger('elemento_id')->unsigned()->index();
                 $table->foreign('elemento_id')->references('id')->on('elementos');

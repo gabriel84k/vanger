@@ -25,7 +25,7 @@ class CreatePuestosTable extends Migration
 
             #[  Se crean las restricciones de clave externa para:sectores_id]
                 $table->bigInteger('sector_id')->unsigned()->index();
-                $table->foreign('sector_id')->references('id')->on('sectores');
+                $table->foreign('sector_id')->references('id')->on('sectores')->onDelete('cascade');
                 
         });
     }

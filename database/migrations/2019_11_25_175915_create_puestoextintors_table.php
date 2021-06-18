@@ -23,7 +23,7 @@ class CreatePuestoextintorsTable extends Migration
                 $table->foreign('puesto_id')->references('id')->on('puestos');
                 
                 $table->bigInteger('elemento_id')->nullable()->unsigned()->index();
-                $table->foreign('elemento_id')->references('id')->on('elementos');
+                $table->foreign('elemento_id')->references('id')->on('elementos')->onDelete('cascade');
 
         });
     }

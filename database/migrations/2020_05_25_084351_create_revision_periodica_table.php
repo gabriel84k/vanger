@@ -24,7 +24,7 @@ class CreateRevisionPeriodicaTable extends Migration
 
             #[  Se crean las restricciones de clave externa para:sectores_id y equipos_id]
                 $table->bigInteger('sucursal_id')->unsigned()->index();
-                $table->foreign('sucursal_id')->references('id')->on('sucursales');
+                $table->foreign('sucursal_id')->references('id')->on('sucursales')->onDelete('cascade');
         });
     }
 

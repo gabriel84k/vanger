@@ -24,7 +24,7 @@ class CreatePuestoescalerasTable extends Migration
             $table->timestamps();
             #[  Se crean las restricciones de clave externa para:puesto_id]
                 $table->bigInteger('puesto_id')->unsigned()->index();
-                $table->foreign('puesto_id')->references('id')->on('puestos');        
+                $table->foreign('puesto_id')->references('id')->on('puestos')->onDelete('cascade');       
         });
     }
 

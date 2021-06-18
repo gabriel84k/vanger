@@ -17,10 +17,10 @@ class CreateServicioRechazoTable extends Migration
             $table->bigIncrements('id');
 
             $table->bigInteger('servicio_id')->unsigned()->index();
-            $table->foreign('servicio_id')->references('id')->on('servicios');
+            $table->foreign('servicio_id')->references('id')->on('servicios')->onDelete('cascade');
 
             $table->bigInteger('rechazo_id')->unsigned()->index();
-            $table->foreign('rechazo_id')->references('id')->on('rechazos');
+            $table->foreign('rechazo_id')->references('id')->on('rechazos')->onDelete('cascade');
 
           
 

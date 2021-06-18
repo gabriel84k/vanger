@@ -15,7 +15,7 @@ class CreateEquiposTable extends Migration
     {
         Schema::create('extintors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->integer('idequipo');
+            
             $table->string('nro_equipo_evolution',10)->nullable();
             $table->string('tipo',50)->nullable();
             $table->string('tipo_generico',50)->nullable();
@@ -29,7 +29,6 @@ class CreateEquiposTable extends Migration
             $table->date('vencimiento_carga');
             $table->date('vencimiento_ph');
             $table->date('vencimientoVidaUtil')->nullable();
-            $table->string('empresaAnterior')->nullable();
             $table->integer('baja')->nullable();
             $table->string('row_type')->nullable();
             $table->tinyInteger('sustituto')->nullable();
@@ -39,7 +38,7 @@ class CreateEquiposTable extends Migration
 
             #[  Se crean las restricciones de clave externa para:sectores_id y equipos_id]
                 $table->bigInteger('elemento_id')->unsigned()->index();
-                $table->foreign('elemento_id')->references('id')->on('elementos');
+                $table->foreign('elemento_id')->references('id')->on('elementos')->onDelete('cascade');
             
         });
     }

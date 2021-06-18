@@ -21,7 +21,7 @@ class CreateSectoresTable extends Migration
             $table->timestamps();
             #[  Se crean las restricciones de clave externa para:sucursal_id]
                 $table->bigInteger('sucursales_id')->unsigned()->index();
-                $table->foreign('sucursales_id')->references('id')->on('sucursales');
+                $table->foreign('sucursales_id')->references('id')->on('sucursales')->onDelete('cascade');
         });
     }
 

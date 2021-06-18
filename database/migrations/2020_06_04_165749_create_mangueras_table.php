@@ -37,7 +37,7 @@ class CreateManguerasTable extends Migration
            
             #[  Se crean las restricciones de clave externa para:sectores_id y equipos_id]
                 $table->bigInteger('elemento_id')->unsigned()->index();
-                $table->foreign('elemento_id')->references('id')->on('elementos');
+                $table->foreign('elemento_id')->references('id')->on('elementos')->onDelete('cascade');
         });
     }
 

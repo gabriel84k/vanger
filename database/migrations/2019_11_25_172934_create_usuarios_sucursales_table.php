@@ -13,7 +13,7 @@ class CreateUsuariosSucursalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Usuarios_Sucursales', function (Blueprint $table) {
+        Schema::create('usuarios_sucursales', function (Blueprint $table) {
             $table->bigIncrements('id');
             
             $table->bigInteger('sucursales_id')->unsigned()->nullable()->index();

@@ -21,7 +21,7 @@ class CreateInspeccionescalerasegusursTable extends Migration
             
             #[  Se crean las restricciones de clave externa para:puesto_id]
                 $table->bigInteger('inspeccion_id')->unsigned()->index();
-                $table->foreign('inspeccion_id')->references('id')->on('inspecciones');
+                $table->foreign('inspeccion_id')->references('id')->on('inspecciones')->onDelete('cascade');
         });
     }
 
