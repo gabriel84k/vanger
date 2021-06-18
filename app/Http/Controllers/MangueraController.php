@@ -25,6 +25,18 @@ class MangueraController extends Controller
             
             $user=Auth::user();
             $sucursal=Auth::user()->sucursales()->get();
+            # - Páginas totales en tabla -#
+                if (request()->get('total')){
+                    if (request()->get('total')>14 && request()->get('total')<101){
+                        $totalpage=request()->get('total');
+                    }else{
+                        $totalpage=15;
+                    }
+                    
+                }else{
+                    $totalpage=15;
+                }
+            #- Fin Paginas Totales-#
             $arr_eq=[];
             foreach ($sucursal as $key => $Suc_val) {
                 $array_suc[$key]=$Suc_val->id;
@@ -38,7 +50,7 @@ class MangueraController extends Controller
             $tipo=request()->tipo;
             
             if ($tipo==2){
-                $elementotipo=Manguera::WhereIn('elemento_id',$arr_eq)->paginate(12);    
+                $elementotipo=Manguera::WhereIn('elemento_id',$arr_eq)->paginate( $totalpage);    
             }
             
             foreach ($elementotipo as $key => $valueEquipo) {
@@ -97,7 +109,18 @@ class MangueraController extends Controller
         try{
             $señal=0;
             $campos= request()->all();
-            
+            # - Páginas totales en tabla -#
+                if (request()->get('total')){
+                    if (request()->get('total')>14 && request()->get('total')<101){
+                        $totalpage=request()->get('total');
+                    }else{
+                        $totalpage=15;
+                    }
+                    
+                }else{
+                    $totalpage=15;
+                }
+            #- Fin Paginas Totales-#
             foreach ($campos as $key => $value) {
                 if ($value!=''){
                     $señal=1;
@@ -154,7 +177,7 @@ class MangueraController extends Controller
                                             $query->where('baja',$campos['estado']);
                                         }
                                      })
-                                    ->paginate(12);   
+                                    ->paginate($totalpage);   
                 
             //}
                   

@@ -115,7 +115,7 @@ class InspeccionController extends Controller
                     $Item->fotos=[];
                
                     $insp_fotos=(new Fotos)::where('inspecciones_id',$Item->id)->get();  
-                   
+                    
                     foreach ($insp_fotos as $key => $fotos_url) {
                         if (Storage::disk('compartido')->exists($fotos_url->foto)){
                             $fotos_url->visible=\Storage::disk('compartido')->getVisibility($fotos_url->foto);
@@ -153,17 +153,30 @@ class InspeccionController extends Controller
             $campos= request()->all();
             $señal=0;
             foreach ($campos as $key => $value) {
-                if ($value!=''){
+                if ($value!=''  && $key !='page' && $key !='total' ) {
                     $señal=1;
                 }
             };
-            
+            # - Páginas totales en tabla -#
+            if (request()->get('total')){
+                if (request()->get('total')>14 && request()->get('total')<101){
+                    $totalpage=request()->get('total');
+                }else{
+                    $totalpage=15;
+                }
+                
+            }else{
+                $totalpage=15;
+            }
+            #- Fin Paginas Totales-#
             $arr=[];
             $Insp= Inspeccion::where('revision_periodica_id',$Controles->id);
-            if ($campos['incidencia']!=''){
-                $Insp->where('incidencias','like','%'.$campos['incidencia'].'%');
+            if(isset($campos['incidencia'])){
+                if ($campos['incidencia']!=''){
+                    $Insp->where('incidencias','like','%'.$campos['incidencia'].'%');
+                }
             }
-            $Insp=$Insp->paginate(12);
+            $Insp=$Insp->paginate($totalpage);
            
             /*Filtro de Busqueda*/
             foreach ($Insp as $key => $Item) {
@@ -171,29 +184,36 @@ class InspeccionController extends Controller
                 if ($señal!=0){
                                       
                     $puesto=$Item->puesto()->where(function($query) use ($campos) { 
-                                            if ($campos['sector']!=''){
+                                            if (isset($campos['sector'])){
+                                                if($campos['sector']!=''){
                                                 
-                                                $sector= Sector::where('nombre','like','%'.$campos['sector'].'%')->first();
-                                                if($sector){
-                                                    $query->where('sector_id',$sector->id);
-                                                }else{
-                                                    $query->where('sector_id',-1);
+                                                    $sector= Sector::where('nombre','like','%'.$campos['sector'].'%')->first();
+                                                    if($sector){
+                                                        $query->where('sector_id',$sector->id);
+                                                    }else{
+                                                        $query->where('sector_id',-1);
+                                                    }
+                                                
                                                 }
+                                            }
+
+                                            if (isset($campos['puesto'])){
+                                                if($campos['puesto']!=''){
+                                                    $query->where('ubicacion','like','%'.$campos['puesto'].'%');
+                                                }
+                                            }
+                                            if (isset($campos['tipo'])){ 
+                                                if($campos['tipo']!=''){
                                                 
-                                            }
-                                            if ($campos['puesto']!=''){
-                                                $query->where('ubicacion','like','%'.$campos['puesto'].'%');
-                                            }
-                                            if ($campos['tipo']!=''){
-                                               
-                                                $query->where('row_type','like','%'.$campos['tipo'].'%');
+                                                    $query->where('row_type','like','%'.$campos['tipo'].'%');
+                                                }
                                             }
                                         })->first();
                     
                    
                     
                 }else{
-                    $puesto=$Item->puesto()->first();
+                    $puesto=null;//$Item->puesto()->first();
                 }
 
                 if ($puesto){
@@ -205,7 +225,12 @@ class InspeccionController extends Controller
                 }
             }
        
-            $Insp= Inspeccion::whereIn('id',$arr)->paginate(12);
+            if($arr){
+                //dd($arr);
+                $Insp= Inspeccion::whereIn('id',$arr)->paginate($totalpage);
+            }else{
+                $Insp = Inspeccion::where('revision_periodica_id',$Controles->id)->paginate($totalpage);
+            }
             
             foreach ($Insp as $key => $Item) {
             # [- Se Agrega la Configuración de las inspecciones-] #    

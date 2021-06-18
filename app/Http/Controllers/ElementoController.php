@@ -40,7 +40,7 @@ class ElementoController extends Controller
         
         switch (request()->tipo) {
             case 0:
-                $elemento=EquiposController::index();
+                $elemento=EquipoController::index();
                 return $elemento;
                 break;
             case 1:
@@ -58,33 +58,13 @@ class ElementoController extends Controller
         }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
     public function show_pdf($tipo)
     {
         try {
            
             switch ($tipo) {
                 case 0:
-                    $elemento=EquiposController::search();
+                    $elemento=EquipoController::search();
                   
                     return $elemento;
                     break;
@@ -107,6 +87,26 @@ class ElementoController extends Controller
             dd($th->getMessage());  
         }
     }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
@@ -119,7 +119,7 @@ class ElementoController extends Controller
              
         switch (request()->tipo) {
             case 0:
-                $elemento=EquiposController::show($id);
+                $elemento=EquipoController::show($id);
                 break;
             case 1:
                 $elemento=BombaController::show($id);
@@ -139,7 +139,7 @@ class ElementoController extends Controller
        
         switch ($tipo) {
             case 0:
-                return EquiposController::search();
+                return EquipoController::search();
                 break;
             case 1:
                 return BombaController::search();

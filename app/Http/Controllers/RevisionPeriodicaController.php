@@ -39,7 +39,7 @@ class RevisionPeriodicaController extends Controller
         try {
             if ($señal==0){
                 
-                $Rperiodicas= (new Revision_Periodica)::whereIN('sucursal_id',$arr_id)->paginate(5);
+                $Rperiodicas= (new Revision_Periodica)::whereIN('sucursal_id',$arr_id)->orderby('fecha','DESC')->paginate(5);
                 foreach ($Rperiodicas as $key => $value) {
                     $value->columnas=$value->column;
                     $value->sucursal= Sucursales::find($value->sucursal_id);
@@ -56,6 +56,7 @@ class RevisionPeriodicaController extends Controller
                                             }
                                             if($campos['Fdesde']!=''){ $query->whereBetween('fecha',[$campos['Fdesde'],$campos['Fhasta']]);}
                                         })
+                                        ->orderby('fecha','DESC')
                                         ->paginate(5);
               
                 foreach ($Rperiodicas as $key => $value) {
@@ -136,13 +137,24 @@ class RevisionPeriodicaController extends Controller
                     $señal=1;
                 }
             };
-         
+            # - Páginas totales en tabla -#
+                if (request()->get('total')){
+                    if (request()->get('total')>14 && request()->get('total')<101){
+                        $totalpage=request()->get('total');
+                    }else{
+                        $totalpage=15;
+                    }
+                    
+                }else{
+                    $totalpage=15;
+                }
+            #- Fin Paginas Totales-#
             $Insp= Inspeccion::where('revision_periodica_id',$Controles->id);
             
             if ($pdf!=0){
-                $Insp=$Insp->get();
+                $Insp=$Insp->orderby('fechahora','DESC')->get();
             }else{
-                $Insp=$Insp->paginate(12);
+                $Insp=$Insp->orderby('fechahora','DESC')->paginate($totalpage);
             }
             
           
@@ -263,7 +275,7 @@ class RevisionPeriodicaController extends Controller
                     $Insp_rowtype=$Item->row_type;
                     $Item->columnas=$Item->column;
                     $Item->ColParticulares=$Item->Attr_particulares;
-                                   
+
                     $Item->sucursal=$sucursal;
     
                 # [- Se Agrga los Puestos Correspondientes -] #
@@ -272,9 +284,11 @@ class RevisionPeriodicaController extends Controller
                     $puesto->tipopuesto=$puesto->$puesto_rowtype;
                     $puesto->sector;
                     $Item->puesto=$puesto;
-                    $Item->$Insp_rowtype->columnas= $Item->$Insp_rowtype->column;
-                    $Item->$Insp_rowtype->codigoelemento= $puesto->tipopuesto->codigoElemento;
-                    $Item->DetalleInspeccion=$Item->$Insp_rowtype;
+                    if ($Item->$Insp_rowtype){
+                        $Item->$Insp_rowtype->columnas= $Item->$Insp_rowtype->column;
+                        $Item->$Insp_rowtype->codigoelemento= $puesto->tipopuesto->codigoElemento;
+                        $Item->DetalleInspeccion=$Item->$Insp_rowtype;
+                    }
                 
                     
                     # [- Se Agrga los Equipos Correspondientes -] #

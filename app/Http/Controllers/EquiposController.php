@@ -15,6 +15,11 @@ use Illuminate\Http\Request;
 
 class EquiposController extends Controller
 {
+    
+    
+   
+   
+    
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +31,18 @@ class EquiposController extends Controller
             
             $user=Auth::user();
             $sucursal=Auth::user()->sucursales()->get();
-            
+            # - Páginas totales en tabla -#
+                if (request()->get('total')){
+                    if (request()->get('total')>14 && request()->get('total')<101){
+                        $totalpage=request()->get('total');
+                    }else{
+                        $totalpage=15;
+                    }
+                    
+                }else{
+                    $totalpage=15;
+                }
+            #- Fin Paginas Totales-#
             foreach ($sucursal as $key => $Suc_val) {
                 $array_suc[$key]=$Suc_val->id;
             }
@@ -39,26 +55,26 @@ class EquiposController extends Controller
             $tipo=request()->tipo;
             
             if ($tipo==0){
-                $elementotipo=Equipo::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico',\DB::raw('CONCAT(extintors.capacidad," ",extintors.unidad) as capacidad'),'marca',
+                $elementotipo=Equipo::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico','capacidad','unidad','marca',
                 'fecha_fabricacion','fecha_ultimo_ph','sector','baja','codigo_interno_cliente',
-                'vencimiento_carga','vencimiento_ph','elemento_id','empresaAnterior')
+                'vencimiento_carga','vencimiento_ph','elemento_id')
                                     ->WhereIn('elemento_id',$arr_eq)
-                                    ->paginate(12);    
+                                    ->paginate($totalpage);    
                 $pag = $elementotipo->toArray();
-                $pag = ($pag["current_page"]-1)*12;
+                $pag = ($pag["current_page"]-1)*$totalpage;
             }
             
             foreach ($elementotipo as $key => $valueEquipo) {
                 $valueEquipo->item=($key+1)+$pag;
-
+                $valueEquipo->capacidad=$valueEquipo->capacidad. ' ' .$valueEquipo->unidad;
                 $valueEquipo->config=$valueEquipo->conf;
                 $valueEquipo->columna=$valueEquipo->column;
-                if($valueEquipo->elemento_id){
+                    if($valueEquipo->elemento_id){
                     $puestoinsp=Inspeccion::where('elemento_id',$valueEquipo->elemento_id)->first();
                     if ($puestoinsp){
                         $valueEquipo->puesto=$puestoinsp->puesto->nroPuesto.' - '.$puestoinsp->puesto->ubicacion;
                     }
-                }
+                    }
             }
             
             
@@ -107,7 +123,18 @@ class EquiposController extends Controller
     {
         $señal=0;
         $campos= request()->all();
-        
+        # - Páginas totales en tabla -#
+            if (request()->get('total')){
+                if (request()->get('total')>14 && request()->get('total')<101){
+                    $totalpage=request()->get('total');
+                }else{
+                    $totalpage=15;
+                }
+                
+            }else{
+                $totalpage=15;
+            }
+        #- Fin Paginas Totales-#
         foreach ($campos as $key => $value) {
             if ($value!=''){
                 $señal=1;
@@ -115,27 +142,38 @@ class EquiposController extends Controller
         };
         try {
             $user=Auth::user();
-            $sucursal=Auth::user()->sucursales()->get();
+            if (!empty($campos['sucursal'])){
+                $sucursal=Auth::user()->sucursales()->where('sucursales.id',$campos['sucursal'])->get();
+            }else{
+                $sucursal=Auth::user()->sucursales()->get();
+            }
+            if  (!empty($campos['pdf'])){
+                if( $campos['pdf']!=''){
+                    $paginate=10000;
+                }
+            }else{
+                $paginate=$totalpage;
+            }
             if ($señal==0){
                 
                 foreach ($sucursal as $key => $Suc_val) {
                     $array_suc[$key]=$Suc_val->id;
                 }
-                $equipos=(new Equipo)::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico',\DB::raw('CONCAT(extintors.capacidad," ",extintors.unidad) as capacidad'),'marca',
+                $equipos=(new Equipo)::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico','capacidad','unidad','marca',
                                         'fecha_fabricacion','fecha_ultimo_ph','sector','baja','codigo_interno_cliente',
-                                        'vencimiento_carga','vencimiento_ph','sucursal_id','empresaAnterior')
+                                        'vencimiento_carga','vencimiento_ph','sucursal_id')
                                         ->join('elementos','elementos.id','extintors.elemento_id')
                                         ->whereIn('elementos.sucursal_id',$array_suc)
-                                        ->paginate(12);
+                                        ->paginate($totalpage);
                 
             }else{    
                 foreach ($sucursal as $key => $Suc_val) {
                     $array_suc[$key]=$Suc_val->id;
                 }
                
-                $equipos=(new Equipo)::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico',\DB::raw('CONCAT(extintors.capacidad," ",extintors.unidad) as capacidad'),'marca',
+                $equipos=(new Equipo)::select('extintors.id','nro_equipo_evolution','tipo','tipo_generico','capacidad','unidad','marca',
                                 'fecha_fabricacion','fecha_ultimo_ph','sector','baja','codigo_interno_cliente',
-                                'vencimiento_carga','vencimiento_ph','sucursal_id','elemento_id','empresaAnterior')
+                                'vencimiento_carga','vencimiento_ph','sucursal_id','elemento_id')
                                 ->join('elementos','elementos.id','extintors.elemento_id')
                              
                                
@@ -144,13 +182,16 @@ class EquiposController extends Controller
                                         if( $campos['nequipo']!=''){$query->where('nro_equipo_evolution',$campos['nequipo']);}
                                     }
                                     if (!empty($campos['sector'])){
-                                        if( $campos['sector']!=''){$query->where('empresaAnterior','like','%' .$campos['sector'].'%') ;}
-                                    }
-                                    if (!empty($campos['agente'])){
-                                        if( $campos['agente']!=''){$query->where('tipo','like','%' .$campos['agente'].'%') ;}
+                                        if( $campos['sector']!=''){$query->where('sector','like','%' .$campos['sector'].'%') ;}
                                     }
                                     if (!empty($campos['marca'])){
                                         if( $campos['marca']!=''){ $query->where('marca','like','%' .$campos['marca'].'%') ;}
+                                    }
+                                    if (!empty($campos['agente'])){
+                                        if( $campos['agente']!=''){ $query->where('tipo','like','%' .$campos['agente'].'%') ;}
+                                    }
+                                    if (!empty($campos['codinterno'])){
+                                        if( $campos['codinterno']!=''){ $query->where('codigo_interno_cliente',$campos['codinterno']);}
                                     }
                                     if (!empty($campos['capacidad'])){
                                         if( $campos['capacidad']!=''){ $query->where('capacidad',$campos['capacidad']);}
@@ -177,20 +218,25 @@ class EquiposController extends Controller
                                     }
                                 })
                                 ->whereIn('elementos.sucursal_id',$array_suc)
-                                ->paginate(12);
+                                ->paginate($totalpage);
+                                
+                               
+                               
             }
+
+           
               
             $pag = $equipos->toArray();
-            $pag = ($pag["current_page"]-1)*12;
+            $pag = ($pag["current_page"]-1)*$totalpage;
             
             foreach ($equipos as $key => $valueEquipo) {
                 $valueEquipo->item=($key+1)+$pag;
                 $valueEquipo->config=$valueEquipo->conf;
                 $valueEquipo->columna=$valueEquipo->column;
+                $valueEquipo->capacidad=$valueEquipo->capacidad. ' ' .$valueEquipo->unidad;
 
                 $puestoinsp=(new Inspeccion)::where('elemento_id',$valueEquipo->elemento_id)->first();
                 if(!is_null($puestoinsp)){
-                   
                     $puesto = Puesto::find($puestoinsp->puesto_id);
                     $tipo_elemento=$puesto->row_type;
                     $puesto->$tipo_elemento;                   
