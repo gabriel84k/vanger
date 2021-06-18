@@ -244,6 +244,7 @@ class Inspecciones extends Controller
         $Inspeccion->idinspeccion=$request->get('id');
 
         $Inspeccion->codigoControl=$request->get('codigoControl');
+        
         $Inspeccion->incidencias=$request->get('incidencias');
         $Inspeccion->recomendacion=(is_null ($request->get('recomendacion')))?0:$request->get('recomendacion');
         $Inspeccion->elementoAusente=(is_null ($request->get('elementoAusente')))?0:$request->get('elementoAusente');

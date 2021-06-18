@@ -32,7 +32,6 @@ class Elemento
                 }else{
                     $Model_Equipo->baja =0;
                 }
-                $Model_Equipo->empresaAnterior =$value['empresaAnterior'];
                 $Model_Equipo->capacidad =(float)$value['cap'][0]['capacidad'];
                 $Model_Equipo->unidad =$value['cap'][0]['unidad'];
                 $Model_Equipo->codigo_interno_cliente ='falta';
@@ -58,7 +57,6 @@ class Elemento
                 $Model_Equipo->sector =$request->input('contrato.0.sucursales.0.sectores.0.sector');
                 $Model_Equipo->vencimiento_carga =$value['vencimientoDeCarga'];
                 $Model_Equipo->vencimiento_ph =$value['vencimientoDePH'];
-                $Model_Equipo->empresaAnterior =$value['empresaAnterior'];
                 if (!empty($value['baja'])){
                     $Model_Equipo->baja =$value['baja'];
                 }else{

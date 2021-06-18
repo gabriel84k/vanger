@@ -137,7 +137,7 @@ class SPEController extends Controller
                     
                         ///////ver si es puesto con elemento o no ////////////
                         if ($elemento_id){
-                        
+                            
                             if ($elemento_id == null){
                                 $Puesto['puesto']['elemento_id'] = null;
 
@@ -147,9 +147,11 @@ class SPEController extends Controller
                                 
                             }
                         }
-                    
+                       
+                        
                         $rowtype = $MPuesto->row_type;
                         if ( $MPuesto->$rowtype()->exists() ){
+                            //return $MPuesto->$rowtype;
                             unset( $Puesto['puesto']['class'] );
                             $MPuestos = $MPuesto->$rowtype()->update($Puesto['puesto']);
 
@@ -168,17 +170,15 @@ class SPEController extends Controller
             }
           
             foreach ($request->input('equipossinpuesto') as $key => $equipossinpuestos) {
-               
-                   
-                    $elemento_id=$this->_Elemento($equipossinpuestos['elemento'],$idSucursal);
-                    
                 
+                $elemento_id=$this->_Elemento($equipossinpuestos['elemento'],$idSucursal);
 
             }
             return \Response::json(['status'=>0,'descripcion'=>'Se crearon los sectores puestos y elementos correctamente.','data'=> '' ]);
             #[•Fin Sectores•]
         } catch (\Throwable $th) {
-            return \Response::json(['status'=>-1,'descripcion'=>'Error no se pudo terminar la operación. Error: '.$th->getMessage().' Linea: '.$th->getLine(),'data'=> '' ]);
+
+            return \Response::json(['status'=>-1,'descripcion'=>'Error no se pudo terminar la operación. Error: '.$th->getMessage().' Linea: '.$th->getLine(),'data'=> 'elemento :'. json_encode($elemento_id) ]);
                 
         }
     }
@@ -188,10 +188,11 @@ class SPEController extends Controller
             
             $value=$Puesto['elemento'];
             try {  
-                
+               
                 $elemento=Elemento::where('idelementosigex',$Puesto['elementobase']['idequipo'])
                                             ->where('sucursal_id',$idSucursal)
                                             ->first();
+                                        
                 #[•Elemento Base•]
                 if (!$elemento){
                     $elemento=(new Elemento);
@@ -243,7 +244,7 @@ class SPEController extends Controller
                 $value['elemento_id']=$elemento->id;
                 switch ($señal) {
                     case 0:
-                        
+                       
                         $TipoElemento->update($value);
                         break;
                     case 1:
@@ -254,11 +255,15 @@ class SPEController extends Controller
                 
                 return $elemento;
             } catch (\Throwable $th) {
-                return \Response::json(['status'=>-1,'descripcion'=>'Detalle completo: '.$th->getMessage().' Line:'.$th->getLine().'Api Controller: DatosController->_elemento','data'=>'']);
+                
+                return \Response::json(['status'=>-1,'descripcion'=>'Detalle completo: '.$th->getMessage().' Line:'.$th->getLine().'Api Controller: DatosController->_elemento','data'=>$Puesto]);
                 
             }  
             
+        }else{
+            return [];
         }
+        
     }
     /**
      * Display the specified resource.

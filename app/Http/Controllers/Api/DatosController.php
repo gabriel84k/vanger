@@ -72,10 +72,13 @@ class DatosController extends Controller
                                     //code...
                                 
                                 $Model_RPeriodica->nrocontrol=$request->input('nroControl');
+                                
+                                $Model_RPeriodica->nroContrato=$request->input('contrato.0.nroContrato');
                                 $Model_RPeriodica->fecha=$request->input('fechaRealizado');
                                 $Model_RPeriodica->estado=1;
                                 $Model_RPeriodica->comentario=$request->input('observaciones');
                                 $Model_RPeriodica->idControlPeriodico=$request->input('id');
+                                $Model_RPeriodica->responsableCliente=$request->input('responsableCliente');
                                 $Model_RPeriodica->sucursal_id= $idSucursal;
                             
                                 $Model_RPeriodica->save();
@@ -84,10 +87,13 @@ class DatosController extends Controller
                             }
                         }else{
                             #[•Modifica RP•]
+                            
                             $Model_RPeriodica->nrocontrol=$request->input('nroControl');
+                            $Model_RPeriodica->nroContrato=$request->input('contrato.0.nroContrato');
                             $Model_RPeriodica->fecha=$request->input('fechaRealizado');
                             $Model_RPeriodica->estado=1;
                             $Model_RPeriodica->comentario=$request->input('observaciones');
+                            $Model_RPeriodica->responsableCliente=$request->input('responsableCliente');
                             $Model_RPeriodica->sucursal_id= $idSucursal;
                     
                             $Model_RPeriodica->update();
@@ -134,7 +140,7 @@ class DatosController extends Controller
                                     }
                                    
                                     #[• Puestos •]
-                                    $MPuesto=Puesto::where('sector_id',$Model_Sect->id)->where('nroPuesto',$Puesto["nroPuesto"])->first();
+                                    $MPuesto=Puesto::where('sector_id',$Model_Sect->id)->where('idPuesto',$Puesto["idPuesto"])->first();
                                    
                                     #[Transforma los valores null]
                                     if (empty($Puesto['nroPuesto'])){
@@ -156,7 +162,7 @@ class DatosController extends Controller
                                         $MPuesto=$MPuesto->create($Puesto);
                                        
                                     }else{
-                                        $MPuesto->idPuesto=$Puesto['nroPuesto'];
+                                        $MPuesto->idPuesto=$Puesto['idPuesto'];
                                         $MPuesto->update($Puesto);
                                     }
                                     

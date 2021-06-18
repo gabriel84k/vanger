@@ -62,7 +62,20 @@ class UserController extends Controller
             $Permiso_Man=($request->get('permisoNoMostrarMangueras'))?false:true;
             $Permiso_Bom=($request->get('permisoNoMostrarBombas'))?false:true;
 
-            $permisos=json_encode(['Equipos'=>$Permiso_Eq,'Controles'=>$Permiso_Cont,'Planilla'=>$Permiso_Pla,'Repuesto'=>$Permiso_rep, 'Mangueras'=>$Permiso_Man, 'Bombas'=>$Permiso_Bom]);
+            $Permiso_planilla_PDF=($request->get('permisoPDF_Planillas'))?true:false;
+            $Permiso_inspecciones_PDF=($request->get('permisoPDF_Inspecciones'))?true:false;
+            $Permiso_equipos_PDF=($request->get('permisoPDF_Equipos'))?true:false;
+
+            $permisos=json_encode(['Equipos'=>$Permiso_Eq,
+                                        'Controles'=>$Permiso_Cont,
+                                        'Planilla'=>$Permiso_Pla,
+                                        'Repuesto'=>$Permiso_rep, 
+                                        'Mangueras'=>$Permiso_Man, 
+                                        'Bombas'=>$Permiso_Bom, 
+                                        'pdfPlanilla' => $Permiso_planilla_PDF,
+                                        'pdfinspecciones' => $Permiso_inspecciones_PDF,
+                                        'pdfequipos' => $Permiso_equipos_PDF
+                                    ]);
             //$token=$request->input('token');
             $sucursales=$request->get('sucursales'); #- Array(idsucursal , nombre)
            

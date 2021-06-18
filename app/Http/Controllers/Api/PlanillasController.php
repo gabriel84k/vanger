@@ -288,10 +288,10 @@ class PlanillasController extends Controller
             if (isset($campos->codigoInternoCliente)){
                 $Equipos->codigo_interno_cliente = $campos->codigoInternoCliente;
             }
+            $Equipos->codigoInterno =$campos->codigoInterno;
             $Equipos->marca =$campos->Marca;
             $Equipos->tipo = $campos->tipoDeEquipo;
             $Equipos->tipo_generico ='falta';
-            $Equipos->empresaAnterior =$campos->empresaAnterior;
             
             return $Equipos;
         } catch (\Throwable $th) {
@@ -309,7 +309,9 @@ class PlanillasController extends Controller
         $servicio->recipiente =$campos->recipiente;
         $servicio->fechaRecepcion =$campos->fechaRecepcion;
         //$servicio->idOperadorInspeccion =$campos->idOperadorInspeccion;
-        $servicio->operadorInspeccion =$campos->operadorInspeccion;
+        $servicio->operadorInspeccion = $campos->operadorInspeccion;
+        $servicio->numeroTarjetaMunicipal = $campos->numeroTarjetaMunicipal;
+        $servicio->nroEstampilla = $campos->nroEstampilla;
 
         $servicio->realizarPintura =$campos->realizarPintura;
         $servicio->numeroCertificadoCarga =$campos->numeroCertificadoCarga;

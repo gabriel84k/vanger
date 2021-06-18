@@ -90,7 +90,7 @@ class CargaEquipos extends Controller
      */
     public function _Elemento(Elemento $MElemento, $Elementotipo  ){
         try {  
-            
+            //return json_encode($Elementotipo);
             $rowtype= $MElemento->row_type;
             if ($MElemento->$rowtype()->exists()){
                 $TipoElemento=$MElemento->$rowtype();
