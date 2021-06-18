@@ -29,7 +29,7 @@ class CreateEquiposTable extends Migration
             $table->date('vencimiento_carga');
             $table->date('vencimiento_ph');
             $table->date('vencimientoVidaUtil')->nullable();
-            $tabla->string('empresaAnterior')->nullable();
+            $table->string('empresaAnterior')->nullable();
             $table->integer('baja')->nullable();
             $table->string('row_type')->nullable();
             $table->tinyInteger('sustituto')->nullable();
