@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('direccion',100)->nullable();
             $table->string('name')->nullable();
             $table->string('user')->unique();
-            $table->string('permisos',100)->nullable();
+            $table->string('permisos',250)->nullable();
             $table->timestamp('verified_at')->nullable();
             $table->string('password');
             $table->boolean('estado');
